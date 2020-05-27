@@ -25,3 +25,12 @@ class Telegram_Bot(object):
         except Exception as e:
             print(type(e))
             print(e.args)
+
+    def last_msg(self):
+        try:
+            updates = self.url+"getupdates"
+            ret_val = get_url(updates)
+            last_msg = ret_val['result'][0]
+            return last_msg
+        except Exception as e:
+            print(e.args)
