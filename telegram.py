@@ -1,8 +1,8 @@
-from .extra_func import get_url
+from extra_func import get_url
 import time
 
 class Telegram_Bot(object):
-    def __init__(self, bot_id="1133081716:AAE0XRj-w5wmsj4g_-RKVSx2rKixDfolgdM"):
+    def __init__(self, bot_id):
         self.bot_id = bot_id
         self.url = "https://api.telegram.org/bot"+bot_id+"/"
 
